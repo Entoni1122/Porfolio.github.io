@@ -16,7 +16,6 @@
             padding: 0;
         }
 
-        /* Contenitore principale per immagine e testo */
         .top-section {
             display: flex;
             align-items: center;
@@ -48,12 +47,11 @@
             text-align: center;
         }
 
-        /* Box orizzontale con loghi */
         .horizontal-box {
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
+            gap: 100px;
             margin-top: 20px;
             padding: 10px;
         }
@@ -65,7 +63,7 @@
         .horizontal-box img {
             width: 70px;
             height: 70px;
-            border-radius: 40%;
+            border-radius: 20%;
             background-color: #00FFEA;
             padding: 10px;
             transition: transform 0.3s, background-color 0.3s;
@@ -110,8 +108,17 @@
             object-fit: cover;
             border-radius: 50%;
         }
-
-        /* Media queries per dispositivi mobili */
+        .horizontalContact{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+            padding: 10px;
+        }
+        .horizontalContact .text{
+            color: aliceblue;
+        }
         @media (max-width: 768px) {
             .top-section {
                 flex-direction: column;
@@ -161,6 +168,7 @@
                 height: 60px;
             }
         }
+
     </style>
 </head>
 <body>
@@ -180,7 +188,7 @@
     <!-- Entoni intro -->
     <div class="top-section">
         <!-- Immagine -->
-        <img src="Matte.png" alt="Entoni">
+        <img src="Foto.jpg" alt="Entoni">
 
         <!-- Linea divisoria -->
         <div class="divider"></div>
@@ -200,7 +208,7 @@
     <div style="align-items: center; display: flex; flex-direction: column; gap: 10px;">
         <!-- Wild Clone West Intro -->
         <div class="top-section">
-            <img src="WCW.png" alt="Wild Clone West" style="object-fit: contain; border-radius: 0%;width: 500px;">
+            <img src="WCW.png" alt="Wild Clone West" style="object-fit: cover; border-radius: 10%; width: 500px;">
             <div class="text">
                 <a href="https://entoni1122.itch.io/wildclonewest" style="color: aliceblue;" target="_blank">Wild Clone West</a>
                 <div class="textnormal" style="margin-top: 20px;">"It's a school project made in Unity for our final second-year exam.
@@ -211,7 +219,7 @@
 
         <!-- Wachy Wheels Intro -->
         <div class="top-section">
-            <img src="Wachy.png" alt="Wachy Wheels" style="object-fit: contain; border-radius: 0%; width: 400px;">
+            <img src="Wachy.png" alt="Wachy Wheels" style="object-fit: cover; border-radius: 10%; width: 500px;">
             <div class="text">
                 <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_small-mobile-game-made-with-alessandro-dottore-activity-7150443806369251329-C0HG?utm_source=share&utm_medium=member_desktop" style="color: aliceblue;" target="_blank">Wachy Wheels</a>
                 <div class="textnormal" style="margin-top: 20px;">"Wachy is a personal project developed with a friend, designed for mobile. I was responsible for the UI, pedestrian movement, VFX, and power-up implementation."
@@ -223,7 +231,7 @@
     <!-- ADG Intro -->
     <div style="display: flex; flex-direction: row; width: 100%; justify-content: center; margin-top: 100px; gap: 100px;">
         <div class="hor-section">
-            <img src="7LY_6X.png" alt="ADG">
+            <img src="7LY_6X.png" alt="ADG" style="object-fit: cover;width: 500px;border-radius: 10%;">
             <div class="horizontal-divider"></div>
             <div class="text">
                 <a href="https://entoni1122.itch.io/adg" style="color: aliceblue;font-size: 200%;" target="_blank">Airport Delivery Guy</a>
@@ -234,14 +242,32 @@
 
         <!-- Slot Intro -->
         <div class="hor-section">
-            <img src="BattleSlot.png" alt="Battle Slot">
+            <img src="BattleSlot.png" alt="Battle Slot" style="object-fit: cover;width: 500px;border-radius: 10%;">
             <div class="horizontal-divider"></div>
-            <div class="text">
+            <div class="text" >
                 <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_this-is-our-game-for-the-ggj2024-have-fun-activity-7157731285564637184-g7UG?utm_source=share&utm_medium=member_desktop" style="color: aliceblue;font-size: 200%;" target="_blank">Battle Slot</a>
                 <div class="textnormal">"Battle Slot is a game created for the 2024 Global Game Jam. We secured second place in our school's tournament with this project. I was responsible for the slot machine functionality and in-game actions."
                 </div>
             </div>
         </div>
     </div>
+
+    <div class="top-section">
+        <img src="CoffeCV (1).png" alt="Coffe" style="object-fit: cover; border-radius: 10%; width: 500px;">
+        <div class="text">
+            <a href="https://store.steampowered.com/app/3275870/Coffee_Break/" style="color: aliceblue;" target="_blank">Coffe break</a>
+            <div class="textnormal" style="margin-top: 20px;">"Coffee Break" is an upcoming game on Steam, developed for a game jam that we won. Schools across Italy were challenged to create a functional game based on the theme "space". I contributed by developing all the mechanics of the coffee machine, 
+                designing the radio system that changes music based on the rotation of the crank,
+                 and implementing various in-game actions.
+            </div>
+        </div>
+    </div>
+
+    <div class="horizontal-divider"></div>
+    <h2 class="textnormal" style="font-size: 70px;">Contacts</div>
+    <div class="horizontal-box" style="width: 1400px;">
+        <div class="textnormal">entonishkalla34@gmail.com</div>
+    </div>
+
 </body>
 </html>
