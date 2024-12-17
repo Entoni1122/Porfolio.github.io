@@ -12,54 +12,40 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin: 0;
+            padding: 0;
         }
 
         /* Contenitore principale per immagine e testo */
         .top-section {
             display: flex;
             align-items: center;
-            gap: 50px; /* Distanza tra immagine, linea e testo */
-            padding: 100px;
-            width: 80%;
+            gap: 50px;
+            padding: 40px;
+            width: 100%;
             max-width: 1400px;
+            flex-wrap: wrap; /* Per permettere al layout di adattarsi su schermi piccoli */
+            justify-content: center;
         }
 
         .top-section img {
-            width: 600px;
-            height: 600px;
-            object-fit: cover;
-            border-radius: 50%; /* Immagine rotonda */
-        }
-        
-        .hor-section {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            gap: 30px; /* Distanza tra immagine, linea e testo */
-            padding: 10px;
-            width: 40%;
-            height: 60%;
-            max-height: 1400px;
-        }
-
-        .hor-section img {
             width: 300px;
             height: 300px;
             object-fit: cover;
-            border-radius: 50%; /* Immagine rotonda */
+            border-radius: 50%;
         }
 
-
         .divider {
-            width: 2px; /* Spessore della linea */
-            height: 400px; /* Altezza della linea */
-            background-color: antiquewhite; /* Colore della linea */
+            width: 2px;
+            height: 400px;
+            background-color: antiquewhite;
         }
 
         .top-section .text {
-            font-size: 36px; /* Testo grande */
+            font-size: 36px;
             font-weight: bold;
             color: aliceblue;
+            text-align: center;
         }
 
         /* Box orizzontale con loghi */
@@ -67,10 +53,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 100px; /* Spazio tra i loghi */
+            gap: 30px;
             margin-top: 20px;
             padding: 10px;
-            margin-right: 100px;
         }
 
         .horizontal-box a {
@@ -80,14 +65,14 @@
         .horizontal-box img {
             width: 70px;
             height: 70px;
-            border-radius: 40%; /* Sfondo rotondo */
+            border-radius: 40%;
             background-color: #00FFEA;
             padding: 10px;
             transition: transform 0.3s, background-color 0.3s;
         }
 
         .horizontal-box img:hover {
-            transform: scale(1.1); /* Ingrandisce leggermente */
+            transform: scale(1.1);
             background-color: #009488;
         }
 
@@ -96,11 +81,85 @@
             width: 50%;
             height: 2px;
             background-color: antiquewhite;
+            margin: 20px 0;
         }
-        .textnormal{
-          font-size: 26px; /* Testo grande */
+
+        .textnormal {
+            font-size: 20px;
             font-weight: bold;
             color: aliceblue;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        /* Sezione orizzontale con immagini e testo */
+        .hor-section {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 30px;
+            padding: 10px;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+
+        .hor-section img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        /* Media queries per dispositivi mobili */
+        @media (max-width: 768px) {
+            .top-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .divider {
+                display: none; /* Nascondiamo la linea centrale su schermi piccoli */
+            }
+
+            .horizontal-box {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .hor-section {
+                width: 80%;
+                margin: 20px 0;
+            }
+
+            .hor-section img {
+                width: 250px;
+                height: 250px;
+            }
+
+            .textnormal {
+                font-size: 18px;
+            }
+
+            .top-section img {
+                width: 250px;
+                height: 250px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-section .text {
+                font-size: 28px;
+            }
+
+            .textnormal {
+                font-size: 16px;
+            }
+
+            .horizontal-box img {
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
 </head>
@@ -121,10 +180,10 @@
     <!-- Entoni intro -->
     <div class="top-section">
         <!-- Immagine -->
-        <img src="Matte.png" alt="Immagine" style="width: 500px;height: 500px;">
+        <img src="Matte.png" alt="Entoni">
 
         <!-- Linea divisoria -->
-        <div class="divider" style="height: 600px;margin-left: 170px ;"></div>
+        <div class="divider"></div>
 
         <!-- Testo -->
         <div class="text">
@@ -132,89 +191,57 @@
         </div>
     </div>
 
-    <h1 style="font-size: 100px;color: aliceblue;">Jams and projects</h1>
+    <h1 style="font-size: 50px; color: aliceblue; text-align: center;">Jams and Projects</h1>
     <div class="textnormal">
-      Below you can find a list of my personal and <strong>school projects</strong>,
-      as well as jams I have participated in.
+        Below you can find a list of my personal and <strong>school projects</strong>,
+        as well as jams I have participated in.
     </div>
 
+    <div style="align-items: center; display: flex; flex-direction: column; gap: 10px;">
+        <!-- Wild Clone West Intro -->
+        <div class="top-section">
+            <img src="WCW.png" alt="Wild Clone West" style="object-fit: contain; border-radius: 0%;width: 500px;">
+            <div class="text">
+                <a href="https://entoni1122.itch.io/wildclonewest" style="color: aliceblue;" target="_blank">Wild Clone West</a>
+                <div class="textnormal" style="margin-top: 20px;">"It's a school project made in Unity for our final second-year exam.
+                    It was completed in one month with my academy friends. In this project, I was in charge of the UI, player movement, shooting system, and level design."
+                </div>
+            </div>
+        </div>
 
-<div style="align-items: center;display: flex;flex-direction: column; gap:10px">
-    <!-- Wild Clone West Intro -->
-    <div class="top-section">
-      <!-- Immagine -->
-      <img src="WCW.png" alt="Immagine" style="object-fit: none;border-radius: 0%;">
-
-      <!-- Linea divisoria -->
-      <div class="divider"></div>
-
-      <!-- Testo -->
-      <div class="text">
-          <a href="https://entoni1122.itch.io/wildclonewest" style="color: aliceblue;" target="_blank">Wild Clone West</a>
-          <div class="textnormal" style="margin-top: 20px;">"It's a school project made in Unity for our final second-year exam.
-             It was completed in one month with my academy friends. 
-             In this project, I was in charge of the UI, player movement, shooting system, and level design."
-          </div>
-      </div>
+        <!-- Wachy Wheels Intro -->
+        <div class="top-section">
+            <img src="Wachy.png" alt="Wachy Wheels" style="object-fit: contain; border-radius: 0%; width: 400px;">
+            <div class="text">
+                <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_small-mobile-game-made-with-alessandro-dottore-activity-7150443806369251329-C0HG?utm_source=share&utm_medium=member_desktop" style="color: aliceblue;" target="_blank">Wachy Wheels</a>
+                <div class="textnormal" style="margin-top: 20px;">"Wachy is a personal project developed with a friend, designed for mobile. I was responsible for the UI, pedestrian movement, VFX, and power-up implementation."
+                </div>
+            </div>
+        </div>
     </div>
 
+    <!-- ADG Intro -->
+    <div style="display: flex; flex-direction: row; width: 100%; justify-content: center; margin-top: 100px; gap: 100px;">
+        <div class="hor-section">
+            <img src="7LY_6X.png" alt="ADG">
+            <div class="horizontal-divider"></div>
+            <div class="text">
+                <a href="https://entoni1122.itch.io/adg" style="color: aliceblue;font-size: 200%;" target="_blank">Airport Delivery Guy</a>
+                <div class="textnormal">"ADG was created for the Xplace Game Jam. I was responsible for player movement, stacking mechanic, vehicle implementation, and UI design."
+                </div>
+            </div>
+        </div>
 
-    <!-- Wachy Wheels Intro -->
-    <div class="top-section"style ="margin-top: 0;">
-      <!-- Immagine -->
-      <img src="Wachy.png" alt="Immagine" style="object-fit: fill;border-radius: 0%;height: 400px;;">
-
-      <!-- Linea divisoria -->
-      <div class="divider"></div>
-
-      <!-- Testo -->
-      <div class="text">
-          <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_small-mobile-game-made-with-alessandro-dottore-activity-7150443806369251329-C0HG?utm_source=share&utm_medium=member_desktop" style="color: aliceblue;" target="_blank">Wachy Wheels</a>
-          <div class="textnormal" style="margin-top: 20px;">"Wachy is a personal project developed with a friend, 
-            designed for mobile. 
-            I was responsible for the UI, pedestrian movement,
-             VFX, and power-up implementation." 
-          </div>
-      </div>
+        <!-- Slot Intro -->
+        <div class="hor-section">
+            <img src="BattleSlot.png" alt="Battle Slot">
+            <div class="horizontal-divider"></div>
+            <div class="text">
+                <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_this-is-our-game-for-the-ggj2024-have-fun-activity-7157731285564637184-g7UG?utm_source=share&utm_medium=member_desktop" style="color: aliceblue;font-size: 200%;" target="_blank">Battle Slot</a>
+                <div class="textnormal">"Battle Slot is a game created for the 2024 Global Game Jam. We secured second place in our school's tournament with this project. I was responsible for the slot machine functionality and in-game actions."
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-
-<!-- ADG Intro -->
-<div style="display: flex;flex-direction: row;width: 1400px;margin-top: 100px;padding: 100px;gap: 200px;">
-<div class="hor-section" style ="margin-top: -200px;">
-  <!-- Immagine -->
-  <img src="7LY_6X.png" alt="Immagine" style="object-fit: none;">
-
-  <!-- Linea divisoria -->
-  <div class="horizontal-divider" style="margin-bottom: 70px;"></div>
-
-  <!-- Testo -->
-  <div class="text">
-      <a href="https://entoni1122.itch.io/adg" style="color: aliceblue;font-size: 40px;" target="_blank">Airport Delivery Guy</a>
-      <div class="textnormal" style="margin-top: 20px;">"ADG was created for the Xplace Game Jam. I was responsible for player movement,
-         the mechanic of stacking objects on top of each other,
-         vehicle implementation, and, once again, the UI design and implementation." 
-      </div>
-  </div>
-</div>
-
-<!-- Slot Intro -->
-<div class="hor-section"style ="margin-top: -200px;">
-<!-- Immagine -->
-<img src="BattleSlot.png" alt="Immagine" style="object-fit: none;">
-
-<!-- Linea divisoria -->
-<div class="horizontal-divider"style="margin-bottom: 70px;"></div>
-
-<!-- Testo -->
-<div class="text">
-  <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_this-is-our-game-for-the-ggj2024-have-fun-activity-7157731285564637184-g7UG?utm_source=share&utm_medium=member_desktop" style="color: aliceblue;font-size: 40px;" target="_blank">Battle Slot</a>
-  <div class="textnormal" style="margin-top: 20px;">"Battle Slot is a game created for the 2024 Global Game Jam. We managed to secure second place in our school's tournament with this project. 
-    I was responsible for the slot machine functionality and most of the in-game actions."  
-  </div>
-</div>
-</div>
-</div>
 </body>
 </html>
