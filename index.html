@@ -64,14 +64,15 @@
             width: 70px;
             height: 70px;
             border-radius: 20%;
-            background-color: #00FFEA;
+            background-color: #009488;
             padding: 10px;
             transition: transform 0.3s, background-color 0.3s;
+            object-fit: cover;
         }
 
         .horizontal-box img:hover {
             transform: scale(1.1);
-            background-color: #009488;
+            background-color: #00FFEA;
         }
 
         /* Linea orizzontale */
@@ -119,6 +120,17 @@
         .horizontalContact .text{
             color: aliceblue;
         }
+
+        .navbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            width: 100%;
+            background-color: #009488;
+            height: 120px;
+        }
+
         @media (max-width: 768px) {
             .top-section {
                 flex-direction: column;
@@ -172,17 +184,23 @@
     </style>
 </head>
 <body>
+
+    <div class="navbar">
     <!-- Box con loghi cliccabili -->
     <div class="horizontal-box">
         <a href="https://www.linkedin.com/in/entoni-shkalla-5bbb96255/" target="_blank">
             <img src="Linkedin.png" alt="Linkedin">
         </a>
         <a href="https://github.com/Entoni1122" target="_blank">
-            <img src="GitHub-Logo.png" alt="GitHub">
+            <img src="GitHub-Logo.png" alt="GitHub"style="width: 70px;height: 60px;">
         </a>
         <a href="https://entoni1122.itch.io/" target="_blank">
-            <img src="itch.png" alt="itch">
+            <img src="itchlogonoback.png" alt="itch">
         </a>
+        <a href="https://www.youtube.com/@entonishkalla818" target="_blank">
+            <img src="YTBLack.png" alt="itch" style="width: 70px;height: 60px;">
+        </a>
+    </div>
     </div>
 
     <!-- Entoni intro -->
