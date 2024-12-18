@@ -9,7 +9,7 @@
         body {
             font-family: 'Courier New', Courier, monospace;
             background-color: #0D1117;
-            color: aliceblue;
+            color:antiquewhite;
             margin: 0;
             padding: 0;
             display: flex;
@@ -80,19 +80,24 @@
         }
 
         .textnormal {
-            font-size: 18px;
+            font-size: 22px;
             font-weight: bold;
             text-align: center;
             margin: 10px 0;
         }
-
+        .lefttext{
+            font-size: 10px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
         .project-section {
             display: flex;
             flex-direction: column;
-            gap: 40px;
-            align-items: center;
+            gap: 10px;
+            align-items: normal;
             width: 100%;
-            max-width: 1400px;
+            max-width: 1000px;
+            margin-top: 100px;
         }
 
         .project-box {
@@ -125,6 +130,16 @@
             height: 2px;
             background-color: antiquewhite;
             margin: 40px 0;
+        }
+        .maincolumn{
+            display: flex;
+            flex-direction: row;
+            align-items: start;
+            text-align: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 1500px;
+            padding: 20px;
         }
 
         /* Media Queries */
@@ -218,7 +233,7 @@
         Below you can find a list of my personal and <strong>school projects</strong>, as well as jams I have participated in.
     </div>
 
-    <!-- Sezione progetti -->
+    <div class="maincolumn">
     <div class="project-section">
         <div class="project-box">
             <img src="WCW.png" alt="Wild Clone West">
@@ -226,6 +241,7 @@
             <div class="textnormal">
                 "It's a school project made in Unity for our final second-year exam. It was completed in one month with my academy friends. In this project, I was in charge of the UI, player movement, shooting system, and level design."
             </div>
+            <div class="horizontal-divider"style="width: 80%;"></div>
         </div>
 
         <div class="project-box">
@@ -234,6 +250,8 @@
             <div class="textnormal">
                 "Wachy is a personal project developed with a friend, designed for mobile. I was responsible for the UI, pedestrian movement, VFX, and power-up implementation."
             </div>
+            <div class="horizontal-divider"style="width: 80%;"></div>
+
         </div>
 
         <div class="project-box">
@@ -242,6 +260,8 @@
             <div class="textnormal">
                 "ADG was created for the Xplace Game Jam. I was responsible for player movement, stacking mechanic, vehicle implementation, and UI design."
             </div>
+            <div class="horizontal-divider"style="width: 80%;"></div>
+
         </div>
 
         <div class="project-box">
@@ -250,6 +270,8 @@
             <div class="textnormal">
                 "Battle Slot is a game created for the 2024 Global Game Jam. We secured second place in our school's tournament with this project. I was responsible for the slot machine functionality and in-game actions."
             </div>
+            <div class="horizontal-divider" style="width: 80%;"></div>
+
         </div>
 
         <div class="project-box">
@@ -259,14 +281,27 @@
                 "Coffee Break is an upcoming game on Steam, developed for a game jam that we won. Schools across Italy were challenged to create a functional game based on the theme 'space'. I contributed by developing all the mechanics of the coffee machine, designing the radio system that changes music based on the rotation of the crank, and implementing various in-game actions."
             </div>
         </div>
+    
     </div>
+
+    <div class="project-section" style="gap: 100px;">
+     <div class="textnormal" style="font-size: 60px;"><strong>What I Learned</strong></div>
+     <div class="textnormal" style="margin-bottom: 300px;">Full character Locomotion<br>Basics of VFX and Shader Graph<br>UI Animations and Design<br>Shotting System<br>Level Design</div>
+     <div class="textnormal"style="margin-bottom: 400px;">UI Animations and Implementation<br>Optimizations for mobile<br>VFX<br>Different kind of Locomotions (for cars)</div>
+     <div class="textnormal"style="margin-bottom: 500px;">UI Design and Animation<br>Top-Down Character Movement<br>Basics of Game Design<br>Unity Joint System</div>
+     <div class="textnormal"style="margin-bottom: 400px;">How to work in a bigger team<br>LOD<br>Unreal VFX</div>
+     <div class="textnormal"style="margin-bottom: 300px;">Modular radio and coffe machine<br>Rigidbody based interactions</div>
+    </div>
+    </div>
+    
+
 
     <div class="horizontal-divider"></div>
 
     <!-- Contatti -->
     <h2 class="textnormal" style="font-size: 32px;">Contacts</h2>
     <div class="horizontal-box">
-        <div class="textnormal">entonishkalla34@gmail.com</div>
+        <div class="lefttext">entonishkalla34@gmail.com</div>
     </div>
 
 </body>
