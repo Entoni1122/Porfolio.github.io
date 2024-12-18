@@ -3,28 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Completo</title>
+    <title>Entoni Portfolio</title>
     <style>
         /* Stile generale */
         body {
             font-family: 'Courier New', Courier, monospace;
             background-color: #0D1117;
+            color: aliceblue;
+            margin: 0;
+            padding: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin: 0;
-            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            background-color: #009488;
+            width: 100%;
+            padding: 15px 0;
+            flex-wrap: wrap;
+        }
+
+        .horizontal-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .horizontal-box a img {
+            width: 70px;
+            height: 70px;
+            border-radius: 20%;
+            transition: transform 0.3s, background-color 0.3s;
+            object-fit: cover;
+        }
+
+        .horizontal-box a img:hover {
+            transform: scale(1.1);
+            background-color: #00FFEA;
         }
 
         .top-section {
             display: flex;
             align-items: center;
-            gap: 50px;
+            gap: 30px;
             padding: 40px;
             width: 100%;
             max-width: 1400px;
-            flex-wrap: wrap; /* Per permettere al layout di adattarsi su schermi piccoli */
+            flex-wrap: wrap;
             justify-content: center;
+            text-align: center;
         }
 
         .top-section img {
@@ -36,254 +70,202 @@
 
         .divider {
             width: 2px;
-            height: 400px;
+            height: 300px;
             background-color: antiquewhite;
         }
 
-        .top-section .text {
-            font-size: 36px;
-            font-weight: bold;
-            color: aliceblue;
+        h1 {
+            font-size: 50px;
             text-align: center;
         }
 
-        .horizontal-box {
+        .textnormal {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .project-section {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            gap: 40px;
             align-items: center;
-            gap: 100px;
-            margin-top: 20px;
-            padding: 10px;
+            width: 100%;
+            max-width: 1400px;
         }
 
-        .horizontal-box a {
-            text-decoration: none;
+        .project-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+            padding: 20px;
         }
 
-        .horizontal-box img {
-            width: 70px;
-            height: 70px;
-            border-radius: 20%;
-            background-color: #009488;
-            padding: 10px;
-            transition: transform 0.3s, background-color 0.3s;
+        .project-box img {
+            width: 100%;
+            max-width: 500px;
             object-fit: cover;
+            border-radius: 10%;
         }
 
-        .horizontal-box img:hover {
-            transform: scale(1.1);
-            background-color: #00FFEA;
+        .project-box a {
+            color: aliceblue;
+            font-size: 24px;
+            text-decoration: none;
+            font-weight: bold;
         }
 
-        /* Linea orizzontale */
         .horizontal-divider {
             width: 50%;
             height: 2px;
             background-color: antiquewhite;
-            margin: 20px 0;
+            margin: 40px 0;
         }
 
-        .textnormal {
-            font-size: 20px;
-            font-weight: bold;
-            color: aliceblue;
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        /* Sezione orizzontale con immagini e testo */
-        .hor-section {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            gap: 30px;
-            padding: 10px;
-            width: 100%;
-            max-width: 600px;
-            margin: 20px 0;
-        }
-
-        .hor-section img {
-            width: 300px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-        .horizontalContact{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
-            margin-top: 20px;
-            padding: 10px;
-        }
-        .horizontalContact .text{
-            color: aliceblue;
-        }
-
-        .navbar{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-            width: 100%;
-            background-color: #009488;
-            height: 120px;
-        }
-
-        @media (max-width: 768px) {
-            .top-section {
-                flex-direction: column;
-                text-align: center;
-            }
-
+        /* Media Queries */
+        @media (max-width: 1024px) {
             .divider {
-                display: none; /* Nascondiamo la linea centrale su schermi piccoli */
-            }
-
-            .horizontal-box {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .hor-section {
-                width: 80%;
-                margin: 20px 0;
-            }
-
-            .hor-section img {
-                width: 250px;
-                height: 250px;
-            }
-
-            .textnormal {
-                font-size: 18px;
+                display: none;
             }
 
             .top-section img {
                 width: 250px;
                 height: 250px;
             }
-        }
-
-        @media (max-width: 480px) {
-            .top-section .text {
-                font-size: 28px;
-            }
 
             .textnormal {
                 font-size: 16px;
             }
+        }
 
-            .horizontal-box img {
-                width: 60px;
-                height: 60px;
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px;
+            }
+
+            .top-section {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .top-section img {
+                width: 200px;
+                height: 200px;
+            }
+
+            .project-box img {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .textnormal {
+                font-size: 14px;
             }
         }
 
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .textnormal {
+                font-size: 12px;
+            }
+
+            .horizontal-box a img {
+                width: 50px;
+                height: 50px;
+            }
+        }
     </style>
 </head>
 <body>
 
+    <!-- Navbar con loghi cliccabili -->
     <div class="navbar">
-    <!-- Box con loghi cliccabili -->
-    <div class="horizontal-box">
-        <a href="https://www.linkedin.com/in/entoni-shkalla-5bbb96255/" target="_blank">
-            <img src="Linkedin.png" alt="Linkedin">
-        </a>
-        <a href="https://github.com/Entoni1122" target="_blank">
-            <img src="GitHub-Logo.png" alt="GitHub"style="width: 70px;height: 60px;">
-        </a>
-        <a href="https://entoni1122.itch.io/" target="_blank">
-            <img src="itchlogonoback.png" alt="itch">
-        </a>
-        <a href="https://www.youtube.com/@entonishkalla818" target="_blank">
-            <img src="YTBLack.png" alt="itch" style="width: 70px;height: 60px;">
-        </a>
-    </div>
+        <div class="horizontal-box">
+            <a href="https://www.linkedin.com/in/entoni-shkalla-5bbb96255/" target="_blank">
+                <img src="Linkedin.png" alt="Linkedin">
+            </a>
+            <a href="https://github.com/Entoni1122" target="_blank">
+                <img src="GitHub-Logo.png" alt="GitHub">
+            </a>
+            <a href="https://entoni1122.itch.io/" target="_blank">
+                <img src="itchlogonoback.png" alt="itch.io">
+            </a>
+            <a href="https://www.youtube.com/@entonishkalla818" target="_blank">
+                <img src="YTBLack.png" alt="YouTube">
+            </a>
+        </div>
     </div>
 
-    <!-- Entoni intro -->
+    <!-- Introduzione -->
     <div class="top-section">
-        <!-- Immagine -->
         <img src="Foto.jpg" alt="Entoni">
-
-        <!-- Linea divisoria -->
         <div class="divider"></div>
-
-        <!-- Testo -->
-        <div class="text">
-            Hello I'm Entoni and I'm a Game Programmer
+        <div class="text" style="font-size: 30px;">
+            Hello I'm Entoni <br>and I'm a Game Programmer
         </div>
     </div>
 
-    <h1 style="font-size: 50px; color: aliceblue; text-align: center;">Jams and Projects</h1>
+    <h1>Jams and Projects</h1>
     <div class="textnormal">
-        Below you can find a list of my personal and <strong>school projects</strong>,
-        as well as jams I have participated in.
+        Below you can find a list of my personal and <strong>school projects</strong>, as well as jams I have participated in.
     </div>
 
-    <div style="align-items: center; display: flex; flex-direction: column; gap: 10px;">
-        <!-- Wild Clone West Intro -->
-        <div class="top-section">
-            <img src="WCW.png" alt="Wild Clone West" style="object-fit: cover; border-radius: 10%; width: 500px;">
-            <div class="text">
-                <a href="https://entoni1122.itch.io/wildclonewest" style="color: aliceblue;" target="_blank">Wild Clone West</a>
-                <div class="textnormal" style="margin-top: 20px;">"It's a school project made in Unity for our final second-year exam.
-                    It was completed in one month with my academy friends. In this project, I was in charge of the UI, player movement, shooting system, and level design."
-                </div>
+    <!-- Sezione progetti -->
+    <div class="project-section">
+        <div class="project-box">
+            <img src="WCW.png" alt="Wild Clone West">
+            <a href="https://entoni1122.itch.io/wildclonewest" target="_blank">Wild Clone West</a>
+            <div class="textnormal">
+                "It's a school project made in Unity for our final second-year exam. It was completed in one month with my academy friends. In this project, I was in charge of the UI, player movement, shooting system, and level design."
             </div>
         </div>
 
-        <!-- Wachy Wheels Intro -->
-        <div class="top-section">
-            <img src="Wachy.png" alt="Wachy Wheels" style="object-fit: cover; border-radius: 10%; width: 500px;">
-            <div class="text">
-                <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_small-mobile-game-made-with-alessandro-dottore-activity-7150443806369251329-C0HG?utm_source=share&utm_medium=member_desktop" style="color: aliceblue;" target="_blank">Wachy Wheels</a>
-                <div class="textnormal" style="margin-top: 20px;">"Wachy is a personal project developed with a friend, designed for mobile. I was responsible for the UI, pedestrian movement, VFX, and power-up implementation."
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- ADG Intro -->
-    <div style="display: flex; flex-direction: row; width: 100%; justify-content: center; margin-top: 100px; gap: 100px;">
-        <div class="hor-section">
-            <img src="7LY_6X.png" alt="ADG" style="object-fit: cover;width: 500px;border-radius: 10%;">
-            <div class="horizontal-divider"></div>
-            <div class="text">
-                <a href="https://entoni1122.itch.io/adg" style="color: aliceblue;font-size: 200%;" target="_blank">Airport Delivery Guy</a>
-                <div class="textnormal">"ADG was created for the Xplace Game Jam. I was responsible for player movement, stacking mechanic, vehicle implementation, and UI design."
-                </div>
+        <div class="project-box">
+            <img src="Wachy.png" alt="Wachy Wheels">
+            <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_small-mobile-game-made-with-alessandro-dottore-activity-7150443806369251329-C0HG?utm_source=share&utm_medium=member_desktop" target="_blank">Wachy Wheels</a>
+            <div class="textnormal">
+                "Wachy is a personal project developed with a friend, designed for mobile. I was responsible for the UI, pedestrian movement, VFX, and power-up implementation."
             </div>
         </div>
 
-        <!-- Slot Intro -->
-        <div class="hor-section">
-            <img src="BattleSlot.png" alt="Battle Slot" style="object-fit: cover;width: 500px;border-radius: 10%;">
-            <div class="horizontal-divider"></div>
-            <div class="text" >
-                <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_this-is-our-game-for-the-ggj2024-have-fun-activity-7157731285564637184-g7UG?utm_source=share&utm_medium=member_desktop" style="color: aliceblue;font-size: 200%;" target="_blank">Battle Slot</a>
-                <div class="textnormal">"Battle Slot is a game created for the 2024 Global Game Jam. We secured second place in our school's tournament with this project. I was responsible for the slot machine functionality and in-game actions."
-                </div>
+        <div class="project-box">
+            <img src="7LY_6X.png" alt="Airport Delivery Guy">
+            <a href="https://entoni1122.itch.io/adg" target="_blank">Airport Delivery Guy</a>
+            <div class="textnormal">
+                "ADG was created for the Xplace Game Jam. I was responsible for player movement, stacking mechanic, vehicle implementation, and UI design."
             </div>
         </div>
-    </div>
 
-    <div class="top-section">
-        <img src="CoffeCV (1).png" alt="Coffe" style="object-fit: cover; border-radius: 10%; width: 500px;">
-        <div class="text">
-            <a href="https://store.steampowered.com/app/3275870/Coffee_Break/" style="color: aliceblue;" target="_blank">Coffe break</a>
-            <div class="textnormal" style="margin-top: 20px;">"Coffee Break" is an upcoming game on Steam, developed for a game jam that we won. Schools across Italy were challenged to create a functional game based on the theme "space". I contributed by developing all the mechanics of the coffee machine, 
-                designing the radio system that changes music based on the rotation of the crank,
-                 and implementing various in-game actions.
+        <div class="project-box">
+            <img src="BattleSlot.png" alt="Battle Slot">
+            <a href="https://www.linkedin.com/posts/entoni-shkalla-5bbb96255_this-is-our-game-for-the-ggj2024-have-fun-activity-7157731285564637184-g7UG?utm_source=share&utm_medium=member_desktop" target="_blank">Battle Slot</a>
+            <div class="textnormal">
+                "Battle Slot is a game created for the 2024 Global Game Jam. We secured second place in our school's tournament with this project. I was responsible for the slot machine functionality and in-game actions."
+            </div>
+        </div>
+
+        <div class="project-box">
+            <img src="CoffeCV (1).png" alt="Coffee Break">
+            <a href="https://store.steampowered.com/app/3275870/Coffee_Break/" target="_blank">Coffee Break</a>
+            <div class="textnormal">
+                "Coffee Break is an upcoming game on Steam, developed for a game jam that we won. Schools across Italy were challenged to create a functional game based on the theme 'space'. I contributed by developing all the mechanics of the coffee machine, designing the radio system that changes music based on the rotation of the crank, and implementing various in-game actions."
             </div>
         </div>
     </div>
 
     <div class="horizontal-divider"></div>
-    <h2 class="textnormal" style="font-size: 70px;">Contacts</div>
-    <div class="horizontal-box" style="width: 1400px;">
+
+    <!-- Contatti -->
+    <h2 class="textnormal" style="font-size: 32px;">Contacts</h2>
+    <div class="horizontal-box">
         <div class="textnormal">entonishkalla34@gmail.com</div>
     </div>
 
