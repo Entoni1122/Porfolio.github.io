@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Entoni Portfolio</title>
@@ -95,7 +92,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            align-items: normal;
+            align-items: center;
             width: 100%;
             max-width: 1000px;
             margin-top: 100px;
@@ -103,20 +100,24 @@
 
         .project-box {
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
             gap: 20px;
             width: 100%;
             max-width: 800px;
             padding: 20px;
+            border: 1px solid #ffffff20;
+            border-radius: 10px;
+            background-color: #161b22;
+            flex-wrap: wrap;
         }
 
         .project-box img {
-            width: 100%;
-            max-width: 500px;
+            width: 250px;
+            height: auto;
             object-fit: cover;
-            border-radius: 10%;
+            border-radius: 10px;
         }
 
         .project-box a {
@@ -142,7 +143,18 @@
             max-width: 1500px;
             padding: 20px;
         }
+        ul.skills {
+            flex: 1;
+            font-size: 16px;
+            list-style-type: disc;
+            margin: 0;
+            padding-left: 20px;
+            text-align: left;
+        }
 
+        ul.skills li {
+            margin-bottom: 5px;
+        }
         /* Media Queries */
         @media (max-width: 1024px) {
             .divider {
@@ -234,7 +246,6 @@
         Below you can find a list of my personal and <strong>school projects</strong>, as well as jams I have participated in.
     </div>
 
-    <div class="maincolumn">
     <div class="project-section">
         <div class="project-box">
             <img src="WCW.png" alt="Wild Clone West">
@@ -242,7 +253,13 @@
             <div class="textnormal">
                 "It's a school project made in Unity for our final second-year exam. It was completed in one month with my academy friends. In this project, I was in charge of the UI, player movement, shooting system, and level design."
             </div>
-            <div class="horizontal-divider"style="width: 80%;"></div>
+            <ul class="skills">
+                <li>Full character locomotion</li>
+                <li>Basics of VFX and Shader Graph</li>
+                <li>UI Animations and Design</li>
+                <li>Shooting System</li>
+                <li>Level Design</li>
+            </ul>
         </div>
 
         <div class="project-box">
@@ -251,8 +268,13 @@
             <div class="textnormal">
                 "Wachy is a personal project developed with a friend, designed for mobile. I was responsible for the UI, pedestrian movement, VFX, and power-up implementation."
             </div>
-            <div class="horizontal-divider"style="width: 80%;"></div>
-
+            <ul class="skills">
+                <li>Full character locomotion</li>
+                <li>Basics of VFX and Shader Graph</li>
+                <li>UI Animations and Design</li>
+                <li>Shooting System</li>
+                <li>Level Design</li>
+            </ul>
         </div>
 
         <div class="project-box">
@@ -261,8 +283,12 @@
             <div class="textnormal">
                 "ADG was created for the Xplace Game Jam. I was responsible for player movement, stacking mechanic, vehicle implementation, and UI design."
             </div>
-            <div class="horizontal-divider"style="width: 80%;"></div>
-
+            <ul class="skills">
+                <li>Top down chatacyer Locomotion</li>
+                <li>Basics of rigging in blender</li>
+                <li>UI Design and implementation</li>
+                <li>Car Locomotion</li>
+            </ul>
         </div>
 
         <div class="project-box">
@@ -271,8 +297,11 @@
             <div class="textnormal">
                 "Battle Slot is a game created for the 2024 Global Game Jam. We secured second place in our school's tournament with this project. I was responsible for the slot machine functionality and in-game actions."
             </div>
-            <div class="horizontal-divider" style="width: 80%;"></div>
-
+            <ul class="skills">
+                <li>How to work in a bigger team</li>
+                <li>Spefific in game Mechanics(Slot Machine, various actions)</li>
+                <li>UI</li>
+            </ul>
         </div>
 
         <div class="project-box">
@@ -281,25 +310,17 @@
             <div class="textnormal">
                 "Coffee Break is an upcoming game on Steam, developed for a game jam that we won. Schools across Italy were challenged to create a functional game based on the theme 'space'. I contributed by developing all the mechanics of the coffee machine, designing the radio system that changes music based on the rotation of the crank, and implementing various in-game actions."
             </div>
+            <ul class="skills">
+                <li>Fully modular Coffe machine</li>
+                <li>Modular radio</li>
+            </ul>
         </div>
     
     </div>
-
-    <div class="project-section" style="gap: 100px;margin-top: 200px;">
-     <div class="textnormal" style="margin-bottom: 400px;">Full character Locomotion<br>Basics of VFX and Shader Graph<br>UI Animations and Design<br>Shotting System<br>Level Design</div>
-     <div class="textnormal"style="margin-bottom: 400px;">UI Animations and Implementation<br>Optimizations for mobile<br>VFX<br>Different kind of Locomotions (for cars)</div>
-     <div class="textnormal"style="margin-bottom: 500px;">UI Design and Animation<br>Top-Down Character Movement<br>Basics of Game Design<br>Unity Joint System</div>
-     <div class="textnormal"style="margin-bottom: 400px;">How to work in a bigger team<br>LOD<br>Unreal VFX</div>
-     <div class="textnormal"style="margin-bottom: 300px;">Modular radio and coffe machine<br>Rigidbody based interactions<br></div>
-    </div>
-    </div>
-
-    <div class="horizontal-divider"></div>
     <!-- Contatti -->
-    <h2 class="textnormal" style="font-size: 32px;">Contacts</h2>
+    <h2 class="textnormal" style="font-size: 32px;padding-top: 20px;">Contacts</h2>
     <div class="horizontal-box">
         <div class="lefttext">entonishkalla34@gmail.com</div>
-    </div>
 
 </body>
 </html>
